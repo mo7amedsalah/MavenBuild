@@ -6,3 +6,6 @@ on:
 jobs:
   Reusable-caller-job:
     uses: ./.github/workflows/maven-cache.yml
+    with:
+      username: ${{ secrets.DOCKERHUB_USERNAME }}
+      password: ${{ secrets.DOCKERHUB_PASSWORD }}
